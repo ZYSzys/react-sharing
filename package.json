@@ -17,8 +17,7 @@
     "url": "git+https://github.com/ZYSzys/react-sharing.git"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "keywords": [
     "react",
