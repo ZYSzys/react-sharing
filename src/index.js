@@ -16,31 +16,15 @@ function getMetaContentByName(name) {
   return (document.getElementsByName(name)[0] || 0).content;
 }
 
-let image = (document.images[0] || 0).src || '';
-let site =
-  getMetaContentByName('site') ||
-  getMetaContentByName('Site') ||
-  document.title;
-let title =
-  getMetaContentByName('title') ||
-  getMetaContentByName('Title') ||
-  document.title;
-let description =
-  getMetaContentByName('description') ||
-  getMetaContentByName('Description') ||
-  '';
-let url = location.href;
-let origin = location.origin;
-
-let defaultProps = {
-  url: url,
-  origin: origin,
-  title: title,
-  description: description,
-  summary: description,
-  image: image,
-  site: site,
-  source: site,
+const defaultProps = {
+  url: location.href,
+  origin: location.origin,
+  title: getMetaContentByName('title') || getMetaContentByName('Title') || document.title,
+  description: getMetaContentByName('description') || getMetaContentByName('Description') || '',
+  summary: getMetaContentByName('description') || getMetaContentByName('Description') || '',
+  image: (document.images[0] || 0).src || '',
+  site: getMetaContentByName('site') || getMetaContentByName('Site') || document.title,
+  source: getMetaContentByName('site') || getMetaContentByName('Site') || document.title,
   sites: [
     'qzone',
     'weibo',
@@ -53,25 +37,25 @@ let defaultProps = {
     'linkedin',
     'facebook',
   ],
-  wechatQrcodeTitle: '微信扫一扫：分享',
-  wechatQrcodeHelper: '微信里点“发现”，扫一下,二维码便可将本文分享至朋友圈。',
+  wechatQrcodeTitle: '微信扫一扫: 分享',
+  wechatQrcodeHelper: '',
 };
 
 class ShareButtons extends React.Component {
   render() {
-    let sites = this.props.sites;
-    let url = this.props.url;
-    let wechatQrcodeTitle = this.props.wechatQrcodeTitle;
-    let wechatQrcodeHelper = this.props.wechatQrcodeHelper;
+    const sites = this.props.sites;
+    const url = this.props.url;
+    const wechatQrcodeTitle = this.props.wechatQrcodeTitle;
+    const wechatQrcodeHelper = this.props.wechatQrcodeHelper;
 
-    let title = encodeURIComponent(this.props.title);
-    let description = encodeURIComponent(this.props.description);
-    let image = encodeURIComponent(this.props.image);
-    let site = encodeURIComponent(this.props.site);
-    let origin = encodeURIComponent(this.props.origin);
+    const title = encodeURIComponent(this.props.title);
+    const description = encodeURIComponent(this.props.description);
+    const image = encodeURIComponent(this.props.image);
+    const site = encodeURIComponent(this.props.site);
+    const origin = encodeURIComponent(this.props.origin);
 
-    let summary = description;
-    let source = site;
+    const summary = description;
+    const source = site;
 
     const templates = {
       qzone: `http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${url}&title=${title}&desc=${description}&summary=${summary}&site=${source}`,
@@ -87,9 +71,9 @@ class ShareButtons extends React.Component {
       google: `https://plus.google.com/share?url=${url}`,
     };
 
-    let html = _.map(sites, function(site, i) {
+    const html = _.map(sites, function(site, i) {
       if (site === 'wechat') {
-        let doc = (
+        const doc = (
           <div key={i} className="wechat-qrcode">
             <h4>{wechatQrcodeTitle}</h4>
             <div className="qrcode">
@@ -111,7 +95,7 @@ class ShareButtons extends React.Component {
           </a>
         );
       } else {
-        let className = `icon-${site} social-share-icon`;
+        const className = `icon-${site} social-share-icon`;
         return (
           <a
             key={i}
