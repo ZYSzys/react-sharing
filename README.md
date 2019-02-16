@@ -2,6 +2,7 @@
 
 > Simple react social media sharing.
 
+![](/screenshot.png)
 
 ## Install
 
