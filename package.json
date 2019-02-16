@@ -9,7 +9,7 @@
   "scripts": {
     "start": "./node_modules/.bin/babel-node example/server.js",
     "build": "webpack -p --config webpack.config.js",
-    "lint": "prettier **/*.js",
+    "lint": "prettier --write src/index.js example/*.js",
     "test": "npm run lint && echo \"Error: no test specified\""
   },
   "repository": {
