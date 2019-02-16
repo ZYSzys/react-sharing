@@ -13,7 +13,6 @@ class App extends React.Component {
           'twitter',
           'qq',
           'tencent',
-          'wechat',
           'douban',
           'linkedin',
           'facebook',
@@ -21,7 +20,7 @@ class App extends React.Component {
         summary="fuck"
         url="https://github.com/ZYSzys/react-sharing"
         title="react-sharing"
-        description="一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+ 的 react 组件"
+        description="一键分享到微博、QQ空间、QQ好友、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+ 的 react 组件"
       />
     );
   }
