@@ -19,12 +19,27 @@ function getMetaContentByName(name) {
 const defaultProps = {
   url: location.href,
   origin: location.origin,
-  title: getMetaContentByName('title') || getMetaContentByName('Title') || document.title,
-  description: getMetaContentByName('description') || getMetaContentByName('Description') || '',
-  summary: getMetaContentByName('description') || getMetaContentByName('Description') || '',
+  title:
+    getMetaContentByName('title') ||
+    getMetaContentByName('Title') ||
+    document.title,
+  description:
+    getMetaContentByName('description') ||
+    getMetaContentByName('Description') ||
+    '',
+  summary:
+    getMetaContentByName('description') ||
+    getMetaContentByName('Description') ||
+    '',
   image: (document.images[0] || 0).src || '',
-  site: getMetaContentByName('site') || getMetaContentByName('Site') || document.title,
-  source: getMetaContentByName('site') || getMetaContentByName('Site') || document.title,
+  site:
+    getMetaContentByName('site') ||
+    getMetaContentByName('Site') ||
+    document.title,
+  source:
+    getMetaContentByName('site') ||
+    getMetaContentByName('Site') ||
+    document.title,
   sites: [
     'qzone',
     'weibo',
