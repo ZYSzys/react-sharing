@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import QRCode from 'qrcode.react';
 import './share.scss';
 
 const propTypes = {
@@ -52,16 +51,12 @@ const defaultProps = {
     'linkedin',
     'facebook',
   ],
-  wechatQrcodeTitle: '微信扫一扫: 分享',
-  wechatQrcodeHelper: '',
 };
 
 class ShareButtons extends React.Component {
   render() {
     const sites = this.props.sites;
     const url = this.props.url;
-    const wechatQrcodeTitle = this.props.wechatQrcodeTitle;
-    const wechatQrcodeHelper = this.props.wechatQrcodeHelper;
 
     const title = encodeURIComponent(this.props.title);
     const description = encodeURIComponent(this.props.description);
@@ -87,39 +82,15 @@ class ShareButtons extends React.Component {
     };
 
     const html = _.map(sites, function(site, i) {
-      if (site === 'wechat') {
-        const doc = (
-          <div key={i} className="wechat-qrcode">
-            <h4>{wechatQrcodeTitle}</h4>
-            <div className="qrcode">
-              <QRCode value={url} size={100} />
-            </div>
-            <div className="help">
-              <p>{wechatQrcodeHelper}</p>
-            </div>
-          </div>
-        );
-        return (
-          <a
-            key={i}
-            className="social-share-icon icon-wechat"
-            target="_blank"
-            href="javascript:"
-          >
-            {doc}
-          </a>
-        );
-      } else {
-        const className = `icon-${site} social-share-icon`;
-        return (
-          <a
-            key={i}
-            className={className}
-            href={templates[site]}
-            target="_blank"
-          />
-        );
-      }
+      const className = `icon-${site} social-share-icon`;
+      return (
+        <a
+          key={i}
+          className={className}
+          href={templates[site]}
+          target="_blank"
+        />
+      );
     });
     return <div className="social-share">{html}</div>;
   }
