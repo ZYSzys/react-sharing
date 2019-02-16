@@ -1,7 +1,8 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
-import './share.scss';
 import QRCode from 'qrcode.react';
+import './share.scss';
 
 const propTypes = {
   url: PropTypes.string,
