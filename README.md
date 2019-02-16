@@ -1,6 +1,6 @@
 # react-sharing
 [![NPM version](https://img.shields.io/npm/v/react-sharing.svg?style=flat)](https://npmjs.org/package/react-sharing)
-[![Travis CI](https://travis-ci.org/ZYSzys/react-sharing.svg?branch=master)](https://travis-ci.org/ZYSzys/react-sharing)
+[![Travis CI](https://travis-ci.com/ZYSzys/react-sharing.svg?token=hDbx4fFbLLvMJQybMquv&branch=master)](https://travis-ci.com/ZYSzys/react-sharing)
 [![NPM downloads](http://img.shields.io/npm/dm/react-sharing.svg?style=flat)](https://npmjs.org/package/react-sharing)
 [![NPM downloads](http://img.shields.io/npm/dt/react-sharing.svg?style=flat)](https://npmjs.org/package/react-sharing)
 [![David Status](https://img.shields.io/david/ZYSzys/react-sharing.svg?style=flat)](https://github.com/ZYSzys/react-sharing/network/dependencies)
