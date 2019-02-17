@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Sharing from '../src';
+import Sharing from '..';
 
 class App extends React.Component {
   render() {
