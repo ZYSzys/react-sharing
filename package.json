@@ -10,6 +10,7 @@
     "start": "cd example && yarn start",
     "build": "webpack --config webpack.config.js",
     "lint": "prettier --write src/index.js example/*.js",
+    "now-build": "cd example && yarn && yarn build",
     "test": "yarn lint && echo \"Error: no test specified\"",
     "deploy": "cd example && yarn predeploy && yarn deploy"
   },
