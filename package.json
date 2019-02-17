@@ -7,10 +7,11 @@
     "example": "example"
   },
   "scripts": {
-    "start": "cd example && npm start",
+    "start": "cd example && yarn start",
     "build": "webpack --config webpack.config.js",
     "lint": "prettier --write src/index.js example/*.js",
-    "test": "npm run lint && echo \"Error: no test specified\""
+    "test": "yarn lint && echo \"Error: no test specified\"",
+    "deploy": "cd example && yarn predeploy && yarn deploy"
   },
   "repository": {
     "type": "git",
