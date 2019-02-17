@@ -27,7 +27,7 @@ npm install react-sharing
 import Sharing from 'react-sharing';
 
 <Sharing
-  sites = {["qzone", "weibo", "qq", "tencent", "wechat", "douban" ]}
+  sites = {[ "qzone", "weibo", "qq", "tencent", "douban" ]}
   url = "https://github.com/ZYSzys/react-sharing"
   title = "react-sharing"
   description = "Simple react social media sharing."
