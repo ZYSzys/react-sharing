@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import './share.scss';
 
 const propTypes = {
@@ -79,7 +78,7 @@ class ShareButtons extends React.Component {
       google: `https://plus.google.com/share?url=${url}`,
     };
 
-    const html = _.map(sites, function(site, i) {
+    const html = sites.map((site, i) => {
       const className = `icon-${site} social-share-icon`;
       return (
         <a

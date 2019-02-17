@@ -30,7 +30,6 @@
   },
   "homepage": "https://github.com/ZYSzys/react-sharing#readme",
   "dependencies": {
-    "lodash": "^4.5.1",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
