@@ -1,6 +1,6 @@
 {
   "name": "react-sharing",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Simple react social media sharing.",
   "main": "dist/react-sharing.min.js",
   "directories": {
