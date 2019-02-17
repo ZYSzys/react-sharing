@@ -10,7 +10,23 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Sharing />
+          <Sharing
+            url="https://github.com/ZYSzys/react-sharing"
+            title="react-sharing"
+            description="Simple react social media sharing."
+            sites={[
+              'qzone',
+              'weibo',
+              'google',
+              'twitter',
+              'qq',
+              'tencent',
+              'douban',
+              'linkedin',
+              'facebook',
+            ]}
+            summary="react-sharing made social media sharing simple."
+          />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
