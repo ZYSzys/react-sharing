@@ -51,7 +51,7 @@ const defaultProps = {
   ],
 };
 
-class ShareButtons extends React.Component {
+class Sharing extends React.Component {
   render() {
     const sites = this.props.sites;
     const url = this.props.url;
@@ -93,7 +93,7 @@ class ShareButtons extends React.Component {
   }
 }
 
-ShareButtons.propTypes = propTypes;
-ShareButtons.defaultProps = defaultProps;
+Sharing.propTypes = propTypes;
+Sharing.defaultProps = defaultProps;
 
-export default ShareButtons;
+export default Sharing;
