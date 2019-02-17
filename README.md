@@ -21,7 +21,6 @@ yarn add react-sharing
 npm install react-sharing
 ```
 
-
 ## Usage
 
 ```js
@@ -35,6 +34,14 @@ import Sharing from 'react-sharing';
 />
 ```
 
+## Props
+
+Common props you may want to specify include:
+- `url`: PropTypes.string
+- `title`: PropTypes.string
+- `description`: PropTypes.string
+- `sites`: PropTypes.array
+- `summary`: PropTypes.string
 
 ## License
 
