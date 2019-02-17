@@ -8,6 +8,7 @@ const propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   sites: PropTypes.array,
+  summary: PropTypes.string,
 };
 
 function getMetaContentByName(name) {
@@ -62,7 +63,7 @@ class Sharing extends React.Component {
     const site = encodeURIComponent(this.props.site);
     const origin = encodeURIComponent(this.props.origin);
 
-    const summary = description;
+    const summary = encodeURIComponent(this.props.summary) || description;
     const source = site;
 
     const templates = {
