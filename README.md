@@ -34,7 +34,7 @@ import Sharing from 'react-sharing';
 />
 ```
 
-## Props
+### Props
 
 Common props you may want to specify include:
 - `url`: PropTypes.string
@@ -42,6 +42,11 @@ Common props you may want to specify include:
 - `description`: PropTypes.string
 - `sites`: PropTypes.array
 - `summary`: PropTypes.string
+
+## Thanks
+
+- [share.js](https://github.com/overtrue/share.js)
+- [react-share-buttons](https://github.com/DawnyWu/react-share-buttons)
 
 ## License
 
